@@ -156,6 +156,13 @@
 		965F664317CD584F004A9558 /* weatherTableIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F65AF17CD584F004A9558 /* weatherTableIcon.png */; };
 		965F664417CD584F004A9558 /* weatherViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F65B017CD584F004A9558 /* weatherViewBackground.png */; };
 		965F664517CD584F004A9558 /* weatherViewBackground\.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F65B117CD584F004A9558 /* weatherViewBackground\.png */; };
+		965F664D17CD65EA004A9558 /* darkBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664617CD65EA004A9558 /* darkBlue.png */; };
+		965F664E17CD65EA004A9558 /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664717CD65EA004A9558 /* pink.png */; };
+		965F664F17CD65EA004A9558 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664817CD65EA004A9558 /* purple.png */; };
+		965F665017CD65EA004A9558 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664917CD65EA004A9558 /* red.png */; };
+		965F665117CD65EA004A9558 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664A17CD65EA004A9558 /* green.png */; };
+		965F665217CD65EA004A9558 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664B17CD65EA004A9558 /* blue.png */; };
+		965F665317CD65EA004A9558 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664C17CD65EA004A9558 /* orange.png */; };
 		967979E0178AE5A60097F567 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967979DF178AE5A60097F567 /* Foundation.framework */; };
 		967979E2178AE5A60097F567 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967979E1178AE5A60097F567 /* CoreGraphics.framework */; };
 		967979E4178AE5A60097F567 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967979E3178AE5A60097F567 /* UIKit.framework */; };
@@ -336,6 +343,13 @@
 		965F65AF17CD584F004A9558 /* weatherTableIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weatherTableIcon.png; sourceTree = "<group>"; };
 		965F65B017CD584F004A9558 /* weatherViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weatherViewBackground.png; sourceTree = "<group>"; };
 		965F65B117CD584F004A9558 /* weatherViewBackground\.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weatherViewBackground\\.png"; sourceTree = "<group>"; };
+		965F664617CD65EA004A9558 /* darkBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkBlue.png; sourceTree = "<group>"; };
+		965F664717CD65EA004A9558 /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink.png; sourceTree = "<group>"; };
+		965F664817CD65EA004A9558 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
+		965F664917CD65EA004A9558 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		965F664A17CD65EA004A9558 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		965F664B17CD65EA004A9558 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		965F664C17CD65EA004A9558 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
 		967979DC178AE5A60097F567 /* Chronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967979DF178AE5A60097F567 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		967979E1178AE5A60097F567 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -466,6 +480,13 @@
 				965F653D17CD584E004A9558 /* coverSwirl.png */,
 				965F653E17CD584E004A9558 /* customBack.png */,
 				965F653F17CD584E004A9558 /* customBackButton.png */,
+				965F664617CD65EA004A9558 /* darkBlue.png */,
+				965F664717CD65EA004A9558 /* pink.png */,
+				965F664817CD65EA004A9558 /* purple.png */,
+				965F664917CD65EA004A9558 /* red.png */,
+				965F664A17CD65EA004A9558 /* green.png */,
+				965F664B17CD65EA004A9558 /* blue.png */,
+				965F664C17CD65EA004A9558 /* orange.png */,
 				965F654017CD584E004A9558 /* customNavBG.png */,
 				965F654117CD584E004A9558 /* darkBlueBackground.png */,
 				965F654217CD584E004A9558 /* darkBlueBot.png */,
@@ -692,6 +713,7 @@
 				965F662A17CD584F004A9558 /* stockicon.png in Resources */,
 				965F65FF17CD584F004A9558 /* musicLayer.png in Resources */,
 				965F664417CD584F004A9558 /* weatherViewBackground.png in Resources */,
+				965F664F17CD65EA004A9558 /* purple.png in Resources */,
 				965F664117CD584F004A9558 /* weatherAct.png in Resources */,
 				965F663E17CD584F004A9558 /* undertoneRed.png in Resources */,
 				965F660E17CD584F004A9558 /* placeHolderStartUp.png in Resources */,
@@ -710,6 +732,7 @@
 				965F65F617CD584F004A9558 /* internetLayer.png in Resources */,
 				965F65C517CD584F004A9558 /* btfdash.png in Resources */,
 				965F65E017CD584F004A9558 /* frontArrow.png in Resources */,
+				965F665017CD65EA004A9558 /* red.png in Resources */,
 				965F662117CD584F004A9558 /* segment2.png in Resources */,
 				965F65CC17CD584F004A9558 /* centerButton.png in Resources */,
 				965F65BA17CD584F004A9558 /* background.png in Resources */,
@@ -728,6 +751,7 @@
 				965F663317CD584F004A9558 /* table2back.png in Resources */,
 				965F662C17CD584F004A9558 /* stockTableIcon.png in Resources */,
 				965F65B917CD584F004A9558 /* backDrop.png in Resources */,
+				965F665117CD65EA004A9558 /* green.png in Resources */,
 				965F662417CD584F004A9558 /* sporticon.png in Resources */,
 				965F65CD17CD584F004A9558 /* changeDateImage.png in Resources */,
 				965F661E17CD584F004A9558 /* searchBarEdit.png in Resources */,
@@ -753,6 +777,7 @@
 				965F663717CD584F004A9558 /* tableViewLabel copy.png in Resources */,
 				965F65C917CD584F004A9558 /* ButRecRound.png in Resources */,
 				965F662E17CD584F004A9558 /* stopwatch-1.png in Resources */,
+				965F664E17CD65EA004A9558 /* pink.png in Resources */,
 				965F65C117CD584F004A9558 /* bigRedButton.png in Resources */,
 				965F660C17CD584F004A9558 /* pinkBackground.png in Resources */,
 				965F663417CD584F004A9558 /* tableBackLeft.png in Resources */,
@@ -775,6 +800,7 @@
 				965F663117CD584F004A9558 /* tabAct.png in Resources */,
 				965F660F17CD584F004A9558 /* pressEnter copy.png in Resources */,
 				965F65DA17CD584F004A9558 /* dateTableIcon.png in Resources */,
+				965F664D17CD65EA004A9558 /* darkBlue.png in Resources */,
 				965F661517CD584F004A9558 /* pushToGo.png in Resources */,
 				965F65D117CD584F004A9558 /* confirmButton.png in Resources */,
 				965F661317CD584F004A9558 /* purpleBackground.png in Resources */,
@@ -794,6 +820,7 @@
 				965F663917CD584F004A9558 /* timelineIcon.png in Resources */,
 				965F65EC17CD584F004A9558 /* icon3.png in Resources */,
 				965F65B217CD584F004A9558 /* 1195782.1.high.png in Resources */,
+				965F665217CD65EA004A9558 /* blue.png in Resources */,
 				965F660817CD584F004A9558 /* page.png in Resources */,
 				965F660D17CD584F004A9558 /* pinkBot.png in Resources */,
 				965F65EB17CD584F004A9558 /* icon2.png in Resources */,
@@ -819,6 +846,7 @@
 				965F65F017CD584F004A9558 /* iconTestLarge.png in Resources */,
 				965F65D417CD584F004A9558 /* coverSwirl.png in Resources */,
 				965F65E817CD584F004A9558 /* hist.png in Resources */,
+				965F665317CD65EA004A9558 /* orange.png in Resources */,
 				965F664217CD584F004A9558 /* weatherLayer.png in Resources */,
 				965F663017CD584F004A9558 /* sunicon.png in Resources */,
 				965F660417CD584F004A9558 /* newsLayer.png in Resources */,

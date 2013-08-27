@@ -957,7 +957,6 @@
     <resources>
         <image name="arrowLeft.png" width="120" height="150"/>
         <image name="arrowRight.png" width="120" height="150"/>
-        <image name="arrowRight.png" width="120" height="150"/>
         <image name="background.png" width="320" height="214"/>
         <image name="bot.png" width="640" height="538"/>
     </resources>

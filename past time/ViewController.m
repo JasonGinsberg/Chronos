@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
     _searchBar.delegate = self;
     _test = YES;
     
@@ -31,7 +31,7 @@
     [self.view sendSubviewToBack:multiDialController.view];
     //init
     [self switchPresetStrings:nil];
-
+    
     _baseOffset = self.yearPicker.contentOffset.y;
     
     _offsetStep = 205*2 * floorf(self.yearPicker.bounds.size.height / 205*2);
@@ -88,32 +88,40 @@
         
         CGFloat x = i * self.view.frame.size.width;
         
-        UIButton *viewBackground =[[UIButton alloc]initWithFrame:CGRectMake(x,0, self.view.frame.size.width, 214)];
+        UIButton *viewButton =[[UIButton alloc]initWithFrame:CGRectMake(x,0, self.view.frame.size.width, 214)];
         if (i==0){
-            [viewBackground setBackgroundImage:[UIImage imageNamed:@"sportsLayer.png"]forState:UIControlStateNormal];
+            viewButton.tag = i;
+            [viewButton setBackgroundImage:[UIImage imageNamed:@"sportsLayer.png"]forState:UIControlStateNormal];
         }
         else if (i==1){
-            [viewBackground setBackgroundImage:[UIImage imageNamed:@"internetLayer.png"]forState:UIControlStateNormal];
+            viewButton.tag = i;
+            [viewButton setBackgroundImage:[UIImage imageNamed:@"internetLayer.png"]forState:UIControlStateNormal];
         }
         else if (i==2){
-            [viewBackground setBackgroundImage:[UIImage imageNamed:@"stockLayer.png"]forState:UIControlStateNormal];
+            viewButton.tag = i;
+            [viewButton setBackgroundImage:[UIImage imageNamed:@"stockLayer.png"]forState:UIControlStateNormal];
         }
         else if (i==3){
-            [viewBackground setBackgroundImage:[UIImage imageNamed:@"weatherLayer.png"]forState:UIControlStateNormal];
+            viewButton.tag = i;
+            [viewButton setBackgroundImage:[UIImage imageNamed:@"weatherLayer.png"]forState:UIControlStateNormal];
         }
         else if (i==4){
-            [viewBackground setBackgroundImage:[UIImage imageNamed:@"newsLayer.png"]forState:UIControlStateNormal];
+            viewButton.tag = i;
+            [viewButton setBackgroundImage:[UIImage imageNamed:@"newsLayer.png"]forState:UIControlStateNormal];
         }
         else if (i==5){
-            [viewBackground setBackgroundImage:[UIImage imageNamed:@"musicLayer.png"]forState:UIControlStateNormal];
+            viewButton.tag = i;
+            [viewButton setBackgroundImage:[UIImage imageNamed:@"musicLayer.png"]forState:UIControlStateNormal];
         }
         else if (i==6){
-            [viewBackground setBackgroundImage:[UIImage imageNamed:@"priceLayer.png"]forState:UIControlStateNormal];
+            viewButton.tag = i;
+            [viewButton setBackgroundImage:[UIImage imageNamed:@"priceLayer.png"]forState:UIControlStateNormal];
         }
         else if (i==7){
-            [viewBackground setBackgroundImage:[UIImage imageNamed:@"historyLayer.png"]forState:UIControlStateNormal];
+            viewButton.tag = i;
+            [viewButton setBackgroundImage:[UIImage imageNamed:@"historyLayer.png"]forState:UIControlStateNormal];
         }
-        [_homeScroll addSubview:viewBackground];
+        [_homeScroll addSubview:viewButton];
     }
     
     
@@ -160,13 +168,13 @@
         CGFloat y = i * 205/3;
         
         if (i<viewcount-1){
-        UILabel *text =[[UILabel alloc]initWithFrame:CGRectMake(25, y+15, 160, 20)];
-        text.backgroundColor = [UIColor clearColor];
-        text.textColor=[UIColor blackColor];
-        text.font = [UIFont fontWithName:@"Avenir Light" size:18];
-        text.text =[NSString stringWithFormat:@"%i",2013-i];
-        [_yearPicker addSubview:text];
-        [_yearObjects addObject:text];
+            UILabel *text =[[UILabel alloc]initWithFrame:CGRectMake(25, y+15, 160, 20)];
+            text.backgroundColor = [UIColor clearColor];
+            text.textColor=[UIColor blackColor];
+            text.font = [UIFont fontWithName:@"Avenir Light" size:18];
+            text.text =[NSString stringWithFormat:@"%i",2013-i];
+            [_yearPicker addSubview:text];
+            [_yearObjects addObject:text];
         }
         else{
             UILabel *text =[[UILabel alloc]initWithFrame:CGRectMake(25, y+15, 160, 20)];
@@ -196,7 +204,7 @@
 #pragma mark IBActions
 -(UIStatusBarStyle)preferredStatusBarStyle{
     if (_test==YES){
-    return UIStatusBarStyleLightContent;
+        return UIStatusBarStyleLightContent;
     }
     else{
         return UIStatusBarStyleDefault;
@@ -219,7 +227,7 @@
 }
 -(void)setMyYear:(id)sender{
     //[multiDialController setMyYearLimit:sender];
-
+    
 }
 
 //
@@ -278,7 +286,7 @@
         
         _go.hidden = YES;
         _goPressed = YES;
-
+        
     }
     else if (_goPressed==YES){
         [UIView animateWithDuration:0.5
@@ -289,7 +297,7 @@
         _enter.hidden = YES;
         _go.hidden = NO;
         _goPressed = NO;
-
+        
         
     }
 }
@@ -310,21 +318,21 @@
             [_bottomBackground setImage:[UIImage imageNamed:@"purpleBot.png"]];
             int date = 1980;
             [multiDialController setMyYearLimit:date];
-
+            
         }
         else if (_pageNumber==3){
             [_scrollBackground setImage:[UIImage imageNamed:@"pinkBackground.png"]];
             [_bottomBackground setImage:[UIImage imageNamed:@"pinkBot.png"]];
             int date = 1945;
             [multiDialController setMyYearLimit:date];
-
+            
         }
         else if (_pageNumber==4){
             [_scrollBackground setImage:[UIImage imageNamed:@"greenBackground.png"]];
             [_bottomBackground setImage:[UIImage imageNamed:@"greenBot.png"]];
             int date = 1890;
             [multiDialController setMyYearLimit:date];
-
+            
         }
         
         else if (_pageNumber==5){
@@ -333,7 +341,7 @@
             [_bottomBackground setImage:[UIImage imageNamed:@"orangeBot.png"]];
             int date = 1960;
             [multiDialController setMyYearLimit:date];
-
+            
         }
         else if (_pageNumber==6){
             _arrowRight.hidden = YES;
@@ -341,14 +349,14 @@
             [_bottomBackground setImage:[UIImage imageNamed:@"redBot.png"]];
             int date = 1950;
             [multiDialController setMyYearLimit:date];
-
+            
         }
         else if (_pageNumber==7){
             [_scrollBackground setImage:[UIImage imageNamed:@"background.png"]];
             [_bottomBackground setImage:[UIImage imageNamed:@"bot.png"]];
             int date = 1990;
             [multiDialController setMyYearLimit:date];
-
+            
         }
         else if (_pageNumber==0){
             _arrowLeft.hidden = YES;
@@ -356,11 +364,11 @@
             [_bottomBackground setImage:[UIImage imageNamed:@"bot.png"]];
             int date = 1960;
             [multiDialController setMyYearLimit:date];
-
+            
         }
     }
     else{
-    
+        
         
         for (UILabel *label in _yearObjects){
             float y = _yearPicker.contentOffset.y;
@@ -373,19 +381,19 @@
             }
             else{
                 label.textColor = [UIColor lightGrayColor];
-
+                
             }
+        }
+        
+        for (UILabel *label in _monthObjects){
+            float y = _monthPicker.contentOffset.y;
+            if ( NSLocationInRange(label.frame.origin.y-y, NSMakeRange(83, (89-83)))){
+                label.textColor = [UIColor blackColor];
             }
-
-            for (UILabel *label in _monthObjects){
-                float y = _monthPicker.contentOffset.y;
-                if ( NSLocationInRange(label.frame.origin.y-y, NSMakeRange(83, (89-83)))){
-                    label.textColor = [UIColor blackColor];
-                }
-                else{
-                    label.textColor = [UIColor lightGrayColor];
-                    
-                }
+            else{
+                label.textColor = [UIColor lightGrayColor];
+                
+            }
             for (UILabel *label in _dayObjects){
                 float y = _dayPicker.contentOffset.y;
                 if ( NSLocationInRange(label.frame.origin.y-y, NSMakeRange(83, (89-83)))){
@@ -395,10 +403,10 @@
                     label.textColor = [UIColor lightGrayColor];
                     
                 }
-
-                }
+                
             }
         }
+    }
 }
 
 
@@ -406,9 +414,12 @@
     [self showAnimation];
 }
 - (IBAction)enterButton:(id)sender {
-    [self showAnimation];
     _test = NO;
     [self setNeedsStatusBarAppearanceUpdate];
+    if (_pageNumber == 6||_pageNumber == 5|| _pageNumber==4){
+        [self clear];
+    }
+    else {
     CGRect rect = CGRectMake(0.0, 20.0, 320.0, 44.0);
     CGRect top = CGRectMake(0.0, 0.0, 320.0, 20.0);
     [UIView animateWithDuration:0.2 animations:^ {
@@ -417,7 +428,10 @@
         
         [_searchTOp setFrame:top];
         [_searchTOp setNeedsLayout];
-    }];    [_searchBar becomeFirstResponder];
+    }];
+    [_searchBar becomeFirstResponder];
+             }
+
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -436,15 +450,65 @@
     [self clear];
 }
 -(void)clear{
-    int currentPageOffsetX = _homeScroll.contentOffset.x;
-    int currentPageOffsetY = _homeScroll.contentOffset.y;
-    [UIView animateWithDuration:0.2 animations:^ {
-        [_homeScroll setContentOffset:CGPointMake(currentPageOffsetX, currentPageOffsetY+_homeScroll.frame.size.height)];
-    }];
+    UIButton *button;
+    for (UIView* view in [self.homeScroll subviews]){
+        if ([view isKindOfClass:[UIButton class]]){
+            button = (UIButton*)view;
+            
+        }
+        if (button.tag == _pageNumber){
+            
+            [UIView animateWithDuration:0.2 animations:^ {
+                button.frame = CGRectMake(button.frame.origin.x, -210.0, button.frame.size.width, button.frame.size.height);
+                //button.hidden = YES;
+                [self showAnimation];
+
+            }];
+            _homeScroll.scrollEnabled = NO;
+            
+        }
+        else{
+            button.hidden = YES;
+        }
+        
+    }
+    [self changeTop];
+        _go.hidden = YES;
     _arrowRight.hidden = YES;
     _arrowLeft.hidden = YES;
 }
+-(void)changeTop{
+    if (_pageNumber == 1){
+        [_scrollBackground setImage:[UIImage imageNamed:@"darkBlue.png"]];
+        
+    }  else if (_pageNumber == 2){
+        [_scrollBackground setImage:[UIImage imageNamed:@"purple.png"]];
+        
+        
+    }  else if (_pageNumber == 3){
+        [_scrollBackground setImage:[UIImage imageNamed:@"pink.png"]];
+        
+        
+    }  else if (_pageNumber == 4){
+        [_scrollBackground setImage:[UIImage imageNamed:@"green.png"]];
+        
+        
+    }  else if (_pageNumber == 5){
+        [_scrollBackground setImage:[UIImage imageNamed:@"orange.png"]];
+        
+    }  else if (_pageNumber == 6){
+        [_scrollBackground setImage:[UIImage imageNamed:@"red.png"]];
+        
+        
+    }  else if (_pageNumber == 0){
+        [_scrollBackground setImage:[UIImage imageNamed:@"blue.png"]];
+        
+        
+        
+    }
 
+    
+}
 - (IBAction)cancelButton:(id)sender {
     [self showAnimation];
 }
