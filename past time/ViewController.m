@@ -18,9 +18,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    _searched = YES;
-    
+    [super viewDidLoad];    
     _searchBar.delegate = self;
     _test = YES;
     

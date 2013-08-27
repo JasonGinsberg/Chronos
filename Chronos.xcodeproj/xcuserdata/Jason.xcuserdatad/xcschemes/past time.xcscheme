@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "967979DB178AE5A60097F567"
-               BuildableName = "past time.app"
-               BlueprintName = "past time"
-               ReferencedContainer = "container:past time.xcodeproj">
+               BuildableName = "Chronos.app"
+               BlueprintName = "Chronos"
+               ReferencedContainer = "container:Chronos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "967979FC178AE5A60097F567"
-               BuildableName = "past timeTests.xctest"
-               BlueprintName = "past timeTests"
-               ReferencedContainer = "container:past time.xcodeproj">
+               BuildableName = "ChronosTests.xctest"
+               BlueprintName = "ChronosTests"
+               ReferencedContainer = "container:Chronos.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "967979DB178AE5A60097F567"
-            BuildableName = "past time.app"
-            BlueprintName = "past time"
-            ReferencedContainer = "container:past time.xcodeproj">
+            BuildableName = "Chronos.app"
+            BlueprintName = "Chronos"
+            ReferencedContainer = "container:Chronos.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "967979DB178AE5A60097F567"
-            BuildableName = "past time.app"
-            BlueprintName = "past time"
-            ReferencedContainer = "container:past time.xcodeproj">
+            BuildableName = "Chronos.app"
+            BlueprintName = "Chronos"
+            ReferencedContainer = "container:Chronos.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "967979DB178AE5A60097F567"
-            BuildableName = "past time.app"
-            BlueprintName = "past time"
-            ReferencedContainer = "container:past time.xcodeproj">
+            BuildableName = "Chronos.app"
+            BlueprintName = "Chronos"
+            ReferencedContainer = "container:Chronos.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
