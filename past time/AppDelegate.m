@@ -12,6 +12,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+ //   [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+//    NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor], UITextAttributeTextColor, [UIColor darkGrayColor], UITextAttributeTextShadowColor, nil, UITextAttributeFont, [UIFont fontWithName:@"Avenir" size:18]];
+//    [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
     // Override point for customization after application launch.
     return YES;
 }
