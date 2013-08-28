@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     _searchBar.delegate = self;
-    _test = YES;
+    _test = NO;
     
     [self setNeedsStatusBarAppearanceUpdate];
     
@@ -79,6 +79,13 @@
     
     NSInteger viewcount= 7;
     
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+
     _homeScroll.contentSize = CGSizeMake(self.view.frame.size.width*viewcount, 214);
     
     _homeScroll.backgroundColor = [UIColor clearColor];
@@ -89,6 +96,7 @@
         CGFloat x = i * self.view.frame.size.width;
         
         UIButton *viewButton =[[UIButton alloc]initWithFrame:CGRectMake(x,0, self.view.frame.size.width, 214)];
+        [viewButton addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
         if (i==0){
             viewButton.tag = i;
             [viewButton setBackgroundImage:[UIImage imageNamed:@"sportsLayer.png"]forState:UIControlStateNormal];
@@ -203,7 +211,7 @@
 //
 #pragma mark IBActions
 -(UIStatusBarStyle)preferredStatusBarStyle{
-    if (_test==YES){
+    if (_test==NO){
         return UIStatusBarStyleLightContent;
     }
     else{
@@ -289,7 +297,7 @@
         
     }
     else if (_goPressed==YES){
-        [UIView animateWithDuration:0.5
+        [UIView animateWithDuration:0.1
                          animations:^{
                              _bottomBackground.frame = CGRectMake(0, 213, _bottomBackground.frame.size.width, _bottomBackground.frame.size.height);
                          }];
@@ -414,7 +422,9 @@
     [self showAnimation];
 }
 - (IBAction)enterButton:(id)sender {
-    _test = NO;
+    _homeScroll.scrollEnabled = NO;
+    _test = YES;
+    [self showAnimation];
     [self setNeedsStatusBarAppearanceUpdate];
     if (_pageNumber == 6||_pageNumber == 5|| _pageNumber==4){
         [self clear];
@@ -431,11 +441,14 @@
     }];
     [_searchBar becomeFirstResponder];
              }
+    self.homeScroll.alpha = 0.5;
 
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    _test = YES;
+    _homeScroll.scrollEnabled = YES;
+    self.homeScroll.alpha = 1.0;
+    _test = NO;
     [self setNeedsStatusBarAppearanceUpdate];
     CGRect rect = CGRectMake(0.0, -44.0, 320.0, 44.0);
     CGRect top = CGRectMake(0.0, -64.0, 320.0, 20.0);
@@ -450,6 +463,7 @@
     [self clear];
 }
 -(void)clear{
+    _homeScroll.scrollEnabled = NO;
     UIButton *button;
     for (UIView* view in [self.homeScroll subviews]){
         if ([view isKindOfClass:[UIButton class]]){
@@ -459,12 +473,10 @@
         if (button.tag == _pageNumber){
             
             [UIView animateWithDuration:0.2 animations:^ {
-                button.frame = CGRectMake(button.frame.origin.x, -210.0, button.frame.size.width, button.frame.size.height);
+                button.frame = CGRectMake(button.frame.origin.x, -250.0, button.frame.size.width, button.frame.size.height);
                 //button.hidden = YES;
-                [self showAnimation];
 
             }];
-            _homeScroll.scrollEnabled = NO;
             
         }
         else{
@@ -476,6 +488,7 @@
         _go.hidden = YES;
     _arrowRight.hidden = YES;
     _arrowLeft.hidden = YES;
+    _homeScroll.userInteractionEnabled = NO;
 }
 -(void)changeTop{
     if (_pageNumber == 1){
@@ -509,6 +522,29 @@
 
     
 }
+- (void)didTapButton:(UIButton *)button{
+    if (_test==NO){
+    [self showAnimation];
+    }
+}
+
+-(void)dismissKeyboard{
+    _homeScroll.scrollEnabled = YES;
+    _test =NO;
+    self.homeScroll.alpha = 1.0;
+    [_searchBar resignFirstResponder];
+    [self setNeedsStatusBarAppearanceUpdate];
+    CGRect rect = CGRectMake(0.0, -44.0, 320.0, 44.0);
+    CGRect top = CGRectMake(0.0, -64.0, 320.0, 20.0);
+    [UIView animateWithDuration:0.2 animations:^ {
+        [_searchBar setFrame:rect];
+        [_searchBar setNeedsLayout];
+        
+        [_searchTOp setFrame:top];
+        [_searchTOp setNeedsLayout];
+    }];
+}
+
 - (IBAction)cancelButton:(id)sender {
     [self showAnimation];
 }

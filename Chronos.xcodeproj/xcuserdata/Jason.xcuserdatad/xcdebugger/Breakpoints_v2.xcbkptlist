@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "past time/ViewController.m"
-            timestampString = "399338116.652004"
+            timestampString = "399347818.03624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "521"
-            endingLineNumber = "521"
-            landmarkName = "-arrowLeft:"
+            startingLineNumber = "555"
+            endingLineNumber = "555"
+            landmarkName = "-arrowRight:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
