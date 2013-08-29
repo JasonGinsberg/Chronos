@@ -21,7 +21,8 @@
     [super viewDidLoad];
     _searchBar.delegate = self;
     _test = NO;
-    
+    _loadedSpecificView = NO;
+    _pressedSearch = NO;
     [self setNeedsStatusBarAppearanceUpdate];
     
     multiDialController = [[MultiDialViewController alloc] init];
@@ -85,7 +86,7 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-
+    
     _homeScroll.contentSize = CGSizeMake(self.view.frame.size.width*viewcount, 214);
     
     _homeScroll.backgroundColor = [UIColor clearColor];
@@ -211,12 +212,9 @@
 //
 #pragma mark IBActions
 -(UIStatusBarStyle)preferredStatusBarStyle{
-    if (_test==NO){
-        return UIStatusBarStyleLightContent;
-    }
-    else{
-        return UIStatusBarStyleDefault;
-    }
+    
+    return UIStatusBarStyleLightContent;
+    
 }
 - (void)switchPresetStrings:(id)sender {
     if ([(UISwitch *)sender isOn]) {
@@ -289,7 +287,6 @@
                          animations:^{
                              _bottomBackground.frame = CGRectMake(0, 418, _bottomBackground.frame.size.width, _bottomBackground.frame.size.height);
                          }];
-        _cancel.hidden = NO;
         _enter.hidden = NO;
         
         _go.hidden = YES;
@@ -301,7 +298,6 @@
                          animations:^{
                              _bottomBackground.frame = CGRectMake(0, 213, _bottomBackground.frame.size.width, _bottomBackground.frame.size.height);
                          }];
-        _cancel.hidden = YES;
         _enter.hidden = YES;
         _go.hidden = NO;
         _goPressed = NO;
@@ -312,10 +308,10 @@
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
     CGFloat pageWidth = sender.frame.size.width;
     _pageNumber= floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    
     if ([sender isEqual:_homeScroll]){
         if (_pageNumber==1){
             _arrowLeft.hidden = NO;
+            _blankLeft.hidden = YES;
             [_scrollBackground setImage:[UIImage imageNamed:@"darkBlueBackground.png"]];
             [_bottomBackground setImage:[UIImage imageNamed:@"darkBlueBot.png"]];
             int date = 1996;
@@ -345,6 +341,7 @@
         
         else if (_pageNumber==5){
             _arrowRight.hidden = NO;
+            _blankRight.hidden=YES;
             [_scrollBackground setImage:[UIImage imageNamed:@"orangeBackground.png"]];
             [_bottomBackground setImage:[UIImage imageNamed:@"orangeBot.png"]];
             int date = 1960;
@@ -353,6 +350,7 @@
         }
         else if (_pageNumber==6){
             _arrowRight.hidden = YES;
+            _blankRight.hidden=NO;
             [_scrollBackground setImage:[UIImage imageNamed:@"redBackground.png"]];
             [_bottomBackground setImage:[UIImage imageNamed:@"redBot.png"]];
             int date = 1950;
@@ -368,6 +366,7 @@
         }
         else if (_pageNumber==0){
             _arrowLeft.hidden = YES;
+            _blankLeft.hidden = NO;
             [_scrollBackground setImage:[UIImage imageNamed:@"background.png"]];
             [_bottomBackground setImage:[UIImage imageNamed:@"bot.png"]];
             int date = 1960;
@@ -425,31 +424,40 @@
     _homeScroll.scrollEnabled = NO;
     _test = YES;
     [self showAnimation];
+    [self loadSearch];
+}
+-(void)loadSearch{
     [self setNeedsStatusBarAppearanceUpdate];
+    _homeScroll.userInteractionEnabled = NO;
+    _homeScroll.scrollEnabled = NO;
+    _arrowLeft.hidden = YES;
+    _arrowRight.hidden = YES;
     if (_pageNumber == 6||_pageNumber == 5|| _pageNumber==4){
         [self clear];
+        _changeSearchButton.enabled = NO;
+        _changeSearchButton.hidden = YES;
+        
     }
     else {
-    CGRect rect = CGRectMake(0.0, 20.0, 320.0, 44.0);
-    CGRect top = CGRectMake(0.0, 0.0, 320.0, 20.0);
-    [UIView animateWithDuration:0.2 animations:^ {
-        [_searchBar setFrame:rect];
-        [_searchBar setNeedsLayout];
-        
-        [_searchTOp setFrame:top];
-        [_searchTOp setNeedsLayout];
-    }];
-    [_searchBar becomeFirstResponder];
-             }
-    self.homeScroll.alpha = 0.5;
-
+        CGRect rect = CGRectMake(0.0, 20.0, 320.0, 44.0);
+        CGRect top = CGRectMake(0.0, 0.0, 320.0, 20.0);
+        [UIView animateWithDuration:0.2 animations:^ {
+            [_searchBar setFrame:rect];
+            [_searchBar setNeedsLayout];
+            
+            [_searchTOp setFrame:top];
+            [_searchTOp setNeedsLayout];
+        }];
+        [_searchBar becomeFirstResponder];
+        self.homeScroll.alpha = 0.5;
+    }
+    
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    _homeScroll.scrollEnabled = YES;
     self.homeScroll.alpha = 1.0;
+    _pressedSearch = NO;
     _test = NO;
-    [self setNeedsStatusBarAppearanceUpdate];
     CGRect rect = CGRectMake(0.0, -44.0, 320.0, 44.0);
     CGRect top = CGRectMake(0.0, -64.0, 320.0, 20.0);
     [UIView animateWithDuration:0.2 animations:^ {
@@ -460,10 +468,30 @@
         [_searchTOp setNeedsLayout];
     }];
     [_searchBar resignFirstResponder];
-    [self clear];
+    if (_loadedSpecificView==NO){
+        [self clear];
+        _loadedSpecificView = YES;
+        _changeSearchButton.hidden = NO;
+        
+    }
+    else{
+        _go.hidden = YES;
+        _arrowRight.hidden = YES;
+        _arrowLeft.hidden = YES;
+        _homeScroll.userInteractionEnabled = NO;
+        _homeScroll.scrollEnabled = NO;
+        _homeButton.hidden = NO;
+        _changeDateButton.hidden = NO;
+        _changeSearchButton.hidden = NO;
+        _loadedSpecificView = YES;
+    }
 }
+
 -(void)clear{
-    _homeScroll.scrollEnabled = NO;
+    [self disableMainScreen];
+}
+
+-(void) disableMainScreen{
     UIButton *button;
     for (UIView* view in [self.homeScroll subviews]){
         if ([view isKindOfClass:[UIButton class]]){
@@ -474,8 +502,7 @@
             
             [UIView animateWithDuration:0.2 animations:^ {
                 button.frame = CGRectMake(button.frame.origin.x, -250.0, button.frame.size.width, button.frame.size.height);
-                //button.hidden = YES;
-
+                
             }];
             
         }
@@ -484,13 +511,53 @@
         }
         
     }
-    [self changeTop];
-        _go.hidden = YES;
+    [self changeTopTo];
+    _go.hidden = YES;
     _arrowRight.hidden = YES;
     _arrowLeft.hidden = YES;
     _homeScroll.userInteractionEnabled = NO;
+    _homeScroll.scrollEnabled = NO;
+    _homeButton.hidden = NO;
+    _changeDateButton.hidden = NO;
+    _loadedSpecificView = YES;
+    
 }
--(void)changeTop{
+
+-(void) enableMainScreen{
+    UIButton *button;
+    for (UIView* view in [self.homeScroll subviews]){
+        if ([view isKindOfClass:[UIButton class]]){
+            button = (UIButton*)view;
+            
+        }
+        if (button.tag == _pageNumber){
+            
+            [UIView animateWithDuration:0.2 animations:^ {
+                button.frame = CGRectMake(button.frame.origin.x, 0.0, button.frame.size.width, button.frame.size.height);
+                
+            }];
+            
+        }
+        else{
+            button.hidden = NO;
+        }
+        
+    }
+    [self changeTopFrom];
+    _go.hidden = NO;
+    _arrowRight.hidden = NO;
+    _arrowLeft.hidden = NO;
+    _homeScroll.userInteractionEnabled = YES;
+    _homeScroll.scrollEnabled = YES;
+    _homeButton.hidden = YES;
+    _changeSearchButton.hidden = YES;
+    _changeDateButton.hidden = YES;
+    _loadedSpecificView = NO;
+}
+
+
+
+-(void)changeTopTo{
     if (_pageNumber == 1){
         [_scrollBackground setImage:[UIImage imageNamed:@"darkBlue.png"]];
         
@@ -519,21 +586,65 @@
         
         
     }
-
     
+    
+    
+}
+-(void)changeTopFrom{
+    if (_pageNumber == 1){
+        [_scrollBackground setImage:[UIImage imageNamed:@"darkBlueBackground.png"]];
+        
+    }  else if (_pageNumber == 2){
+        [_scrollBackground setImage:[UIImage imageNamed:@"purpleBackground.png"]];
+        
+        
+    }  else if (_pageNumber == 3){
+        [_scrollBackground setImage:[UIImage imageNamed:@"pinkBackground.png"]];
+        
+        
+    }  else if (_pageNumber == 4){
+        [_scrollBackground setImage:[UIImage imageNamed:@"greenBackground.png"]];
+        
+        
+    }  else if (_pageNumber == 5){
+        [_scrollBackground setImage:[UIImage imageNamed:@"orangeBackground.png"]];
+        
+    }  else if (_pageNumber == 6){
+        [_scrollBackground setImage:[UIImage imageNamed:@"redBackground.png"]];
+        
+        
+    }  else if (_pageNumber == 0){
+        [_scrollBackground setImage:[UIImage imageNamed:@"background.png"]];
+        
+        
+        
+    }
 }
 - (void)didTapButton:(UIButton *)button{
     if (_test==NO){
-    [self showAnimation];
+        [self showAnimation];
     }
 }
 
 -(void)dismissKeyboard{
-    _homeScroll.scrollEnabled = YES;
+    
+    if (_loadedSpecificView == NO){
+        if (_pageNumber == 6){
+            
+        }else{
+            _arrowRight.hidden = NO;
+        }
+        if (_pageNumber==0){
+            
+        }else{
+            _arrowLeft.hidden = NO;
+        }
+        _homeScroll.userInteractionEnabled = YES;
+        _homeScroll.scrollEnabled = YES;
+    }
     _test =NO;
     self.homeScroll.alpha = 1.0;
     [_searchBar resignFirstResponder];
-    [self setNeedsStatusBarAppearanceUpdate];
     CGRect rect = CGRectMake(0.0, -44.0, 320.0, 44.0);
     CGRect top = CGRectMake(0.0, -64.0, 320.0, 20.0);
     [UIView animateWithDuration:0.2 animations:^ {
@@ -543,19 +654,67 @@
         [_searchTOp setFrame:top];
         [_searchTOp setNeedsLayout];
     }];
+    if (_loadedSpecificView == YES){
+        _changeSearchButton.hidden = NO;
+        _changeDateButton.hidden = NO;
+        _homeButton.hidden = NO;
+    }
 }
 
-- (IBAction)cancelButton:(id)sender {
-    [self showAnimation];
-}
+
 - (IBAction)arrowRight:(id)sender {
-    int currentPageOffsetX = _homeScroll.contentOffset.x;
-    int currentPageOffsetY = _homeScroll.contentOffset.y;
-    [_homeScroll setContentOffset:CGPointMake(currentPageOffsetX+_homeScroll.frame.size.width, currentPageOffsetY) animated:YES];
+    if (_homeScroll.contentOffset.x/_pageNumber ==_homeScroll.frame.size.width||_homeScroll.contentOffset.x==0){
+        
+        [_homeScroll setContentOffset:CGPointMake(_homeScroll.contentOffset.x+_homeScroll.frame.size.width, _homeScroll.contentOffset.y) animated:YES];
+    }
 }
 - (IBAction)arrowLeft:(id)sender {
-    int currentPageOffsetX = _homeScroll.contentOffset.x;
-    int currentPageOffsetY = _homeScroll.contentOffset.y;
-    [_homeScroll setContentOffset:CGPointMake(currentPageOffsetX-_homeScroll.frame.size.width, currentPageOffsetY) animated:YES];
+    
+    if (_homeScroll.contentOffset.x/_pageNumber ==_homeScroll.frame.size.width){
+        [_homeScroll setContentOffset:CGPointMake(_homeScroll.contentOffset.x-_homeScroll.frame.size.width, _homeScroll.contentOffset.y) animated:YES];
+    }
+}
+
+- (IBAction)goHome:(id)sender {
+    [self enableMainScreen];
+    _changeSearchButton.enabled = YES;
+}
+
+- (IBAction)changeSearch:(id)sender {
+    _pressedSearch = YES;
+    _changeSearchButton.hidden = YES;
+    _changeDateButton.hidden = YES;
+    _homeButton.hidden = YES;
+    _homeScroll.userInteractionEnabled = NO;
+    _homeScroll.scrollEnabled = NO;
+    
+    [self loadSearch];
+}
+
+- (IBAction)changeDate:(id)sender {
+    _confirmButton.hidden = NO;
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         _bottomBackground.frame = CGRectMake(0, 418, _bottomBackground.frame.size.width, _bottomBackground.frame.size.height);
+                     }];
+    _changeSearchButton.hidden = YES;
+    _changeDateButton.hidden = YES;
+    _homeButton.hidden = YES;
+}
+
+- (IBAction)confirm:(id)sender {
+    _confirmButton.hidden = YES;
+    [UIView animateWithDuration:0.1
+                     animations:^{
+                         _bottomBackground.frame = CGRectMake(0, 213, _bottomBackground.frame.size.width, _bottomBackground.frame.size.height);
+                     }];
+    if (_pageNumber == 4||_pageNumber==5||_pageNumber==6){
+        _changeSearchButton.hidden = YES;
+    }
+    else{
+        _changeSearchButton.hidden = NO;
+    }
+    _changeDateButton.hidden = NO;
+    _homeButton.hidden = NO;
 }
 @end

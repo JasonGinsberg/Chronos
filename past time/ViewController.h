@@ -14,41 +14,50 @@
     
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *selectedStringLabel;
-@property (nonatomic, retain) IBOutlet UITextView *presetStringsView;
-
-- (IBAction)switchPresetStrings:(id)sender;
-
-
+@property (weak, nonatomic) IBOutlet UIView *allPickView;
+@property (strong, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UIScrollView *monthPicker;
 @property (weak, nonatomic) IBOutlet UIScrollView *dayPicker;
 @property (weak, nonatomic) IBOutlet UIScrollView *yearPicker;
+@property (weak, nonatomic) IBOutlet UIImageView *bottomBackground;
+@property (weak, nonatomic) IBOutlet UIScrollView *homeScroll;
 @property (nonatomic) IBOutlet NSMutableArray *monthLabels;
 @property (nonatomic) IBOutlet NSMutableArray *monthObjects;
 @property (nonatomic) IBOutlet NSMutableArray *dayObjects;
 @property (nonatomic) IBOutlet NSMutableArray *yearObjects;
 @property (nonatomic, retain) IBOutlet UITableView *monthTable;
-@property (strong, nonatomic) IBOutlet UIView *mainView;
-@property (weak, nonatomic) IBOutlet UIImageView *bottomBackground;
-@property (weak, nonatomic) IBOutlet UIScrollView *homeScroll;
+
 @property (weak, nonatomic) IBOutlet UIImageView *scrollBackground;
-- (IBAction)goButton:(id)sender;
-@property int pageNumber;
-@property BOOL goPressed;
-- (IBAction)enterButton:(id)sender;
-- (IBAction)cancelButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *cancel;
+@property (weak, nonatomic) IBOutlet UIImageView *searchTOp;
+@property (nonatomic, retain) IBOutlet UITextView *presetStringsView;
+@property (nonatomic, retain) IBOutlet UILabel *selectedStringLabel;
 @property (weak, nonatomic) IBOutlet UIButton *enter;
 @property (weak, nonatomic) IBOutlet UIButton *go;
-@property (weak, nonatomic) IBOutlet UIView *allPickView;
-@property float baseOffset;
-@property float offsetStep;
+
 @property (weak, nonatomic) IBOutlet UIButton *arrowRight;
 @property (weak, nonatomic) IBOutlet UIButton *arrowLeft;
+@property (weak, nonatomic) IBOutlet UIButton *homeButton;
+@property (weak, nonatomic) IBOutlet UIButton *changeSearchButton;
+@property (weak, nonatomic) IBOutlet UIButton *changeDateButton;
+@property (weak, nonatomic) IBOutlet UIButton *blankLeft;
+@property (weak, nonatomic) IBOutlet UIButton *blankRight;
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property int pageNumber;
+@property float baseOffset;
+@property float offsetStep;
+@property (nonatomic) BOOL goPressed;
+@property (nonatomic) BOOL test;
+@property (nonatomic) BOOL pressedSearch;
+@property (nonatomic) BOOL loadedSpecificView;
+- (IBAction)switchPresetStrings:(id)sender;
+- (IBAction)goButton:(id)sender;
+- (IBAction)enterButton:(id)sender;
 - (IBAction)arrowRight:(id)sender;
 - (IBAction)arrowLeft:(id)sender;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (weak, nonatomic) IBOutlet UIImageView *searchTOp;
-@property (nonatomic) BOOL test;
-
+- (IBAction)goHome:(id)sender;
+- (IBAction)changeSearch:(id)sender;
+- (IBAction)changeDate:(id)sender;
+- (IBAction)confirm:(id)sender;
 @end

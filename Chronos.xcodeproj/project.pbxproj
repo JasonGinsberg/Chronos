@@ -163,6 +163,9 @@
 		965F665117CD65EA004A9558 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664A17CD65EA004A9558 /* green.png */; };
 		965F665217CD65EA004A9558 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664B17CD65EA004A9558 /* blue.png */; };
 		965F665317CD65EA004A9558 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F664C17CD65EA004A9558 /* orange.png */; };
+		965F665517CE22E5004A9558 /* searchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F665417CE22E5004A9558 /* searchImage.png */; };
+		965F665717CE22F5004A9558 /* dateImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F665617CE22F5004A9558 /* dateImage.png */; };
+		965F665917CE2306004A9558 /* homeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 965F665817CE2306004A9558 /* homeImage.png */; };
 		967979E0178AE5A60097F567 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967979DF178AE5A60097F567 /* Foundation.framework */; };
 		967979E2178AE5A60097F567 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967979E1178AE5A60097F567 /* CoreGraphics.framework */; };
 		967979E4178AE5A60097F567 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967979E3178AE5A60097F567 /* UIKit.framework */; };
@@ -350,6 +353,9 @@
 		965F664A17CD65EA004A9558 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		965F664B17CD65EA004A9558 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		965F664C17CD65EA004A9558 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		965F665417CE22E5004A9558 /* searchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchImage.png; sourceTree = "<group>"; };
+		965F665617CE22F5004A9558 /* dateImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dateImage.png; sourceTree = "<group>"; };
+		965F665817CE2306004A9558 /* homeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeImage.png; sourceTree = "<group>"; };
 		967979DC178AE5A60097F567 /* Chronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967979DF178AE5A60097F567 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		967979E1178AE5A60097F567 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -490,6 +496,7 @@
 				965F654017CD584E004A9558 /* customNavBG.png */,
 				965F654117CD584E004A9558 /* darkBlueBackground.png */,
 				965F654217CD584E004A9558 /* darkBlueBot.png */,
+				965F665617CE22F5004A9558 /* dateImage.png */,
 				965F654317CD584E004A9558 /* dateTableIcon.png */,
 				965F654417CD584E004A9558 /* DialController.h */,
 				965F654517CD584E004A9558 /* DialController.m */,
@@ -509,6 +516,7 @@
 				965F655317CD584E004A9558 /* hist.png */,
 				965F655417CD584E004A9558 /* historyLayer.png */,
 				965F655517CD584E004A9558 /* home.png */,
+				965F665817CE2306004A9558 /* homeImage.png */,
 				965F655617CD584E004A9558 /* icon2.png */,
 				965F655717CD584E004A9558 /* icon3.png */,
 				965F655817CD584E004A9558 /* icon4.png */,
@@ -562,6 +570,7 @@
 				965F658817CD584F004A9558 /* scrollBack.png */,
 				965F658917CD584F004A9558 /* searchBarBackground.png */,
 				965F658A17CD584F004A9558 /* searchBarEdit.png */,
+				965F665417CE22E5004A9558 /* searchImage.png */,
 				965F658B17CD584F004A9558 /* searchNavBack.png */,
 				965F658C17CD584F004A9558 /* searchTop.png */,
 				965F658D17CD584F004A9558 /* segment2.png */,
@@ -814,10 +823,12 @@
 				965F65DE17CD584F004A9558 /* exp.png in Resources */,
 				965F663D17CD584F004A9558 /* undertoneGreen.png in Resources */,
 				965F65D617CD584F004A9558 /* customBackButton.png in Resources */,
+				965F665517CE22E5004A9558 /* searchImage.png in Resources */,
 				965F661417CD584F004A9558 /* purpleBot.png in Resources */,
 				965F662D17CD584F004A9558 /* stockViewBackground.png in Resources */,
 				965F662F17CD584F004A9558 /* suncion.png in Resources */,
 				965F663917CD584F004A9558 /* timelineIcon.png in Resources */,
+				965F665717CE22F5004A9558 /* dateImage.png in Resources */,
 				965F65EC17CD584F004A9558 /* icon3.png in Resources */,
 				965F65B217CD584F004A9558 /* 1195782.1.high.png in Resources */,
 				965F665217CD65EA004A9558 /* blue.png in Resources */,
@@ -855,6 +866,7 @@
 				965F65E617CD584F004A9558 /* greenBot.png in Resources */,
 				965F65E517CD584F004A9558 /* greenBackground.png in Resources */,
 				965F661717CD584F004A9558 /* recentButtonTop.png in Resources */,
+				965F665917CE2306004A9558 /* homeImage.png in Resources */,
 				965F65BE17CD584F004A9558 /* bar.png in Resources */,
 				965F660017CD584F004A9558 /* musicTableIcon.png in Resources */,
 				965F65EF17CD584F004A9558 /* icons.png in Resources */,

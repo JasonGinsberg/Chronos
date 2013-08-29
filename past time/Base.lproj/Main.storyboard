@@ -77,8 +77,80 @@
                                     <action selector="enterButton:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="Y9e-WO-eqD"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJw-Ka-hfc">
-                                <rect key="frame" x="20" y="82" width="40" height="50"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-GU-KBX">
+                                <rect key="frame" x="0.0" y="-44" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88071986609999997" green="0.88071986609999997" blue="0.88071986609999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="414-sx-DoK">
+                                <rect key="frame" x="0.0" y="-64" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88071986609999997" green="0.88071986609999997" blue="0.88071986609999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9a-2D-mwg">
+                                <rect key="frame" x="20" y="420" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="Home" image="homeImage.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goHome:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="Mm4-zv-gRE"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4L-WW-9wd">
+                                <rect key="frame" x="133" y="423" width="47" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="Search" image="searchImage.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSearch:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="QnM-3K-eY2"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2b-Pr-3O3">
+                                <rect key="frame" x="246" y="420" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="Date" image="dateImage.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeDate:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="1oY-MD-0Vk"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu7-Ys-1va">
+                                <rect key="frame" x="0.0" y="418" width="320" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirm:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="4Bn-Uj-fQa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paY-gt-3QB" userLabel="Button - arrow right">
+                                <rect key="frame" x="238" y="0.0" width="82" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button" image="arrowRight.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="arrowRight:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="1rP-bU-ov6"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJw-Ka-hfc" userLabel="Button - arrow left">
+                                <rect key="frame" x="0.0" y="0.0" width="82" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Button" image="arrowLeft.png">
@@ -88,30 +160,20 @@
                                     <action selector="arrowLeft:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="BDf-Wk-VT5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paY-gt-3QB">
-                                <rect key="frame" x="260" y="82" width="40" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fx-XN-0kP" userLabel="Button - BlankLeft">
+                                <rect key="frame" x="0.0" y="0.0" width="82" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button" image="arrowRight.png" backgroundImage="arrowRight.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="arrowRight:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="1rP-bU-ov6"/>
-                                </connections>
                             </button>
-                            <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-GU-KBX">
-                                <rect key="frame" x="0.0" y="-44" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.88071986609999997" green="0.88071986609999997" blue="0.88071986609999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="0.99926646299999999" blue="0.95116459170000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="1" green="0.99926646300331823" blue="0.95116459167827128" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="414-sx-DoK">
-                                <rect key="frame" x="0.0" y="-64" width="320" height="20"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6g-94-cXs" userLabel="Button - BlankRight">
+                                <rect key="frame" x="238" y="0.0" width="82" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.88071986609999997" green="0.88071986609999997" blue="0.88071986609999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.270588249" green="0.47843140360000003" blue="0.62745100259999997" alpha="1" colorSpace="deviceRGB"/>
@@ -146,10 +208,16 @@
                         <outlet property="allPickView" destination="mfZ-CN-pPd" id="iHt-qM-SJs"/>
                         <outlet property="arrowLeft" destination="zJw-Ka-hfc" id="hFP-TV-dcP"/>
                         <outlet property="arrowRight" destination="paY-gt-3QB" id="XOR-oC-dNi"/>
+                        <outlet property="blankLeft" destination="0fx-XN-0kP" id="F76-AO-8s9"/>
+                        <outlet property="blankRight" destination="I6g-94-cXs" id="sjY-33-5Ye"/>
                         <outlet property="bottomBackground" destination="gsS-gA-6lB" id="UFq-HB-1Re"/>
+                        <outlet property="changeDateButton" destination="b2b-Pr-3O3" id="zKT-Cx-2Hz"/>
+                        <outlet property="changeSearchButton" destination="u4L-WW-9wd" id="Ytn-O0-v1C"/>
+                        <outlet property="confirmButton" destination="Gu7-Ys-1va" id="1Ja-Sy-TaB"/>
                         <outlet property="dayPicker" destination="VNG-Fj-Y7W" id="8G2-ca-GC9"/>
                         <outlet property="enter" destination="9QB-uJ-H26" id="UIf-hq-bu7"/>
                         <outlet property="go" destination="9CA-zE-2JQ" id="azd-Fe-iw9"/>
+                        <outlet property="homeButton" destination="t9a-2D-mwg" id="1VA-M4-R8Q"/>
                         <outlet property="homeScroll" destination="PAX-NE-f1u" id="ErE-aN-Dw1"/>
                         <outlet property="mainView" destination="dBg-Rp-NGq" id="Lkf-hv-d1v"/>
                         <outlet property="monthPicker" destination="bDI-tE-ZK4" id="4UF-xb-umu"/>
@@ -161,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOt-EW-Igy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="-650"/>
+            <point key="canvasLocation" x="-14" y="-650"/>
         </scene>
         <!--Table View Controller - Home-->
         <scene sceneID="TNW-7H-07e">
@@ -955,10 +1023,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowLeft.png" width="120" height="150"/>
-        <image name="arrowRight.png" width="120" height="150"/>
+        <image name="arrowLeft.png" width="246" height="642"/>
+        <image name="arrowRight.png" width="246" height="652"/>
         <image name="background.png" width="320" height="214"/>
         <image name="bot.png" width="640" height="538"/>
+        <image name="dateImage.png" width="162" height="162"/>
+        <image name="homeImage.png" width="162" height="162"/>
+        <image name="searchImage.png" width="162" height="162"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
