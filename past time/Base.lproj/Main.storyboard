@@ -91,7 +91,7 @@
                                 <color key="backgroundColor" red="0.88071986609999997" green="0.88071986609999997" blue="0.88071986609999997" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9a-2D-mwg">
-                                <rect key="frame" x="20" y="420" width="54" height="54"/>
+                                <rect key="frame" x="20" y="420" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                 <state key="normal" title="Home" image="homeImage.png">
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4L-WW-9wd">
-                                <rect key="frame" x="133" y="423" width="47" height="47"/>
+                                <rect key="frame" x="133" y="423" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                 <state key="normal" title="Search" image="searchImage.png">
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2b-Pr-3O3">
-                                <rect key="frame" x="246" y="420" width="54" height="54"/>
+                                <rect key="frame" x="246" y="420" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                 <state key="normal" title="Date" image="dateImage.png">
@@ -127,7 +127,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu7-Ys-1va">
-                                <rect key="frame" x="0.0" y="418" width="320" height="63"/>
+                                <rect key="frame" x="9" y="417" width="320" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                 <state key="normal" title="Enter">
@@ -1027,9 +1027,9 @@
         <image name="arrowRight.png" width="246" height="652"/>
         <image name="background.png" width="320" height="214"/>
         <image name="bot.png" width="640" height="538"/>
-        <image name="dateImage.png" width="162" height="162"/>
-        <image name="homeImage.png" width="162" height="162"/>
-        <image name="searchImage.png" width="162" height="162"/>
+        <image name="dateImage.png" width="141" height="141"/>
+        <image name="homeImage.png" width="141" height="141"/>
+        <image name="searchImage.png" width="141" height="141"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

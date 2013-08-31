@@ -113,10 +113,8 @@
     }
     delimit = limit;
 
-    int dialCount = 0;
     //[self.dial3.view removeFromSuperview];
     self.dial3.strings = _years;
-    [self.view addSubview:self.dial3.view];
 
 }
 

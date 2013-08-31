@@ -8,6 +8,9 @@
 
 #import "MultiDialViewController.h"
 #import "ViewController.h"
+#import "AFNetworking.h"
+#import "SBJSON.h"
+
 @interface ViewController ()
 
 @end
@@ -19,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     _searchBar.delegate = self;
     _test = NO;
     _loadedSpecificView = NO;
@@ -373,6 +377,7 @@
             [multiDialController setMyYearLimit:date];
             
         }
+        
     }
     else{
         
@@ -453,7 +458,6 @@
     }
     
 }
-
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     self.homeScroll.alpha = 1.0;
     _pressedSearch = NO;
@@ -485,11 +489,46 @@
         _changeSearchButton.hidden = NO;
         _loadedSpecificView = YES;
     }
+    _month = [multiDialController.dial1 selectedString];
+    _day = [multiDialController.dial2 selectedString];
+    _year = [multiDialController.dial3 selectedString];
+    _wolframId = @"4LTUQ2-VWALQKV2HL";
+    _searchTerm = [NSString stringWithFormat:@"%@",self.searchBar.text];
+    if (_pageNumber == 3){
+        NSLog(@"term2: %@",_searchTerm);
+        _wolframTerm = [NSString stringWithFormat:@"http://api.wolframalpha.com/v2/query?input=weather+%@+%@+%@+%@&appid=%@",_searchTerm,_month,_day,_year,_wolframId];
+        _url = [NSURL URLWithString:_wolframTerm];
+    }
+    else{
+        _url =[NSURL URLWithString:@" "];
+    }
+    [self callUrl];
+   
+    NSLog(@"Wolfram term :%@",_wolframTerm);
+}
+
+-(void)callUrl{
+    
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:_url];
+
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        //variable so any search works//////////////////////////////
+        NSLog(@"%@",JSON);
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
+        NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
+        
+        
+    }];
+    
+    [operation start];
 }
 
 -(void)clear{
     [self disableMainScreen];
 }
+
 
 -(void) disableMainScreen{
     UIButton *button;
@@ -677,6 +716,12 @@
 
 - (IBAction)goHome:(id)sender {
     [self enableMainScreen];
+    if (_pageNumber == 0){
+        _arrowLeft.hidden = YES;
+    }
+    if (_pageNumber == 6){
+        _arrowRight.hidden = YES;
+    }
     _changeSearchButton.enabled = YES;
 }
 

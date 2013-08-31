@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MultiDialViewController.h"
+#import "AFNetworking.h"
+#import "SBJSON.h"
 
-@interface ViewController : UIViewController <UIScrollViewDelegate, UISearchBarDelegate, MultiDialViewControllerDelegate>{
+@interface ViewController : UIViewController <UIScrollViewDelegate, UISearchBarDelegate,NSXMLParserDelegate, MultiDialViewControllerDelegate>{
     MultiDialViewController *multiDialController;
     
 }
@@ -42,6 +44,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *blankLeft;
 @property (weak, nonatomic) IBOutlet UIButton *blankRight;
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (weak, nonatomic) IBOutlet NSURL *url;
+@property (weak, nonatomic) IBOutlet NSString *searchTerm;
+@property (weak, nonatomic) IBOutlet NSString *month;
+@property (weak, nonatomic) IBOutlet NSString *day;
+@property (weak, nonatomic) IBOutlet NSString *year;
+@property (weak, nonatomic) IBOutlet NSString *wolframId;
+@property (weak, nonatomic) IBOutlet NSString *wolframTerm;
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property int pageNumber;
