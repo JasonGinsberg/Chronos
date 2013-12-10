@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4504" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o8k-Zr-ZpV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o8k-Zr-ZpV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -77,18 +77,18 @@
                                     <action selector="enterButton:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="Y9e-WO-eqD"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-GU-KBX">
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-GU-KBX">
                                 <rect key="frame" x="0.0" y="-44" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.88071986609999997" green="0.88071986609999997" blue="0.88071986609999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.59530452810000001" green="0.59530452810000001" blue="0.59530452810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="414-sx-DoK">
                                 <rect key="frame" x="0.0" y="-64" width="320" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.88071986609999997" green="0.88071986609999997" blue="0.88071986609999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9a-2D-mwg">
                                 <rect key="frame" x="20" y="420" width="44" height="44"/>
@@ -127,7 +127,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu7-Ys-1va">
-                                <rect key="frame" x="9" y="417" width="320" height="63"/>
+                                <rect key="frame" x="0.0" y="417" width="320" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                 <state key="normal" title="Enter">
@@ -149,7 +149,7 @@
                                     <action selector="arrowRight:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="1rP-bU-ov6"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJw-Ka-hfc" userLabel="Button - arrow left">
+                            <button opaque="NO" alpha="0.74999999999999978" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJw-Ka-hfc" userLabel="Button - arrow left">
                                 <rect key="frame" x="0.0" y="0.0" width="82" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -159,20 +159,6 @@
                                 <connections>
                                     <action selector="arrowLeft:" destination="Q69-Hn-bYv" eventType="touchUpInside" id="BDf-Wk-VT5"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fx-XN-0kP" userLabel="Button - BlankLeft">
-                                <rect key="frame" x="0.0" y="0.0" width="82" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6g-94-cXs" userLabel="Button - BlankRight">
-                                <rect key="frame" x="238" y="0.0" width="82" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -208,8 +194,6 @@
                         <outlet property="allPickView" destination="mfZ-CN-pPd" id="iHt-qM-SJs"/>
                         <outlet property="arrowLeft" destination="zJw-Ka-hfc" id="hFP-TV-dcP"/>
                         <outlet property="arrowRight" destination="paY-gt-3QB" id="XOR-oC-dNi"/>
-                        <outlet property="blankLeft" destination="0fx-XN-0kP" id="F76-AO-8s9"/>
-                        <outlet property="blankRight" destination="I6g-94-cXs" id="sjY-33-5Ye"/>
                         <outlet property="bottomBackground" destination="gsS-gA-6lB" id="UFq-HB-1Re"/>
                         <outlet property="changeDateButton" destination="b2b-Pr-3O3" id="zKT-Cx-2Hz"/>
                         <outlet property="changeSearchButton" destination="u4L-WW-9wd" id="Ytn-O0-v1C"/>

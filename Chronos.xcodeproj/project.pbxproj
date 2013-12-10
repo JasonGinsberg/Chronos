@@ -201,6 +201,9 @@
 		96797A09178AE5A60097F567 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96797A07178AE5A60097F567 /* InfoPlist.strings */; };
 		96797A0B178AE5A60097F567 /* past_timeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96797A0A178AE5A60097F567 /* past_timeTests.m */; };
 		96A58244178CBAEE00AEDB4F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A58243178CBAEE00AEDB4F /* QuartzCore.framework */; };
+		96AE642A18476FE80028473D /* chrLaunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96AE642918476FE80028473D /* chrLaunch.jpg */; };
+		96AE642F184773440028473D /* launch4.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AE642D184773430028473D /* launch4.png */; };
+		96AE6430184773440028473D /* launch5.png in Resources */ = {isa = PBXBuildFile; fileRef = 96AE642E184773440028473D /* launch5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,6 +445,9 @@
 		96797A08178AE5A60097F567 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96797A0A178AE5A60097F567 /* past_timeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = past_timeTests.m; sourceTree = "<group>"; };
 		96A58243178CBAEE00AEDB4F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		96AE642918476FE80028473D /* chrLaunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chrLaunch.jpg; sourceTree = "<group>"; };
+		96AE642D184773430028473D /* launch4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch4.png; sourceTree = "<group>"; };
+		96AE642E184773440028473D /* launch5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,8 +514,8 @@
 				967979F1178AE5A60097F567 /* Main.storyboard */,
 				967979F4178AE5A60097F567 /* ViewController.h */,
 				967979F5178AE5A60097F567 /* ViewController.m */,
-				967979F7178AE5A60097F567 /* Images.xcassets */,
 				967979E6178AE5A60097F567 /* Supporting Files */,
+				967979F7178AE5A60097F567 /* Images.xcassets */,
 			);
 			path = "past time";
 			sourceTree = "<group>";
@@ -517,6 +523,8 @@
 		967979E6178AE5A60097F567 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96AE642D184773430028473D /* launch4.png */,
+				96AE642E184773440028473D /* launch5.png */,
 				965F654417CD584E004A9558 /* DialController.h */,
 				965F654517CD584E004A9558 /* DialController.m */,
 				965F656917CD584E004A9558 /* MultiDialViewController.h */,
@@ -559,7 +567,6 @@
 				9655A2AB17D0E95E00030811 /* AFNetworkActivityIndicatorManager.h */,
 				9655A2AC17D0E95E00030811 /* AFNetworkActivityIndicatorManager.m */,
 				9655A2AD17D0E95E00030811 /* AFNetworking.h */,
-				9655A2AE17D0E95E00030811 /* AFPropertyListRequestOperation.h */,
 				9655A2AF17D0E95E00030811 /* AFPropertyListRequestOperation.m */,
 				9655A2B017D0E95E00030811 /* AFURLConnectionOperation.h */,
 				9655A2B117D0E95E00030811 /* AFURLConnectionOperation.m */,
@@ -567,19 +574,20 @@
 				9655A2B317D0E95E00030811 /* AFXMLRequestOperation.m */,
 				9655A2B417D0E95E00030811 /* UIImageView+AFNetworking.h */,
 				9655A2B517D0E95E00030811 /* UIImageView+AFNetworking.m */,
+				9655A2AE17D0E95E00030811 /* AFPropertyListRequestOperation.h */,
 				9655A2A117D0E95000030811 /* AFJSONRequestOperation.m */,
 				9655A29E17D0E7B300030811 /* SBJson.h */,
 				9655A29D17D0E79E00030811 /* AFNetworking.h */,
+				965F652417CD584E004A9558 /* backm2.png */,
 				965F651B17CD584E004A9558 /* 1195782.1.high.png */,
+				965F651E17CD584E004A9558 /* arrowLeft.png */,
 				965F651C17CD584E004A9558 /* Apple%20Time%20Machine%20(3).png */,
 				965F651D17CD584E004A9558 /* arrow_circle_right.png */,
-				965F651E17CD584E004A9558 /* arrowLeft.png */,
 				965F651F17CD584E004A9558 /* arrowRight.png */,
 				965F652017CD584E004A9558 /* arth.png */,
 				965F652117CD584E004A9558 /* backArrow.png */,
 				965F652217CD584E004A9558 /* backDrop.png */,
 				965F652317CD584E004A9558 /* background.png */,
-				965F652417CD584E004A9558 /* backm2.png */,
 				965F652517CD584E004A9558 /* backPicture.png */,
 				965F652617CD584E004A9558 /* bacm.png */,
 				965F652717CD584E004A9558 /* bar.png */,
@@ -599,6 +607,7 @@
 				965F653517CD584E004A9558 /* centerButton.png */,
 				965F653617CD584E004A9558 /* changeDateImage.png */,
 				965F653717CD584E004A9558 /* chromeButton.png */,
+				96AE642918476FE80028473D /* chrLaunch.jpg */,
 				965F653817CD584E004A9558 /* circlePush.png */,
 				965F653917CD584E004A9558 /* clock2.png */,
 				965F653A17CD584E004A9558 /* confirmButton.png */,
@@ -657,6 +666,7 @@
 				965F656C17CD584E004A9558 /* musicTableIcon.png */,
 				965F656D17CD584E004A9558 /* mzi.xmymcucz.png */,
 				965F656E17CD584E004A9558 /* navAct.png */,
+				965F657817CD584E004A9558 /* pinkBackground.png */,
 				965F656F17CD584E004A9558 /* navigationButtonBackground.png */,
 				965F657017CD584E004A9558 /* newsLayer.png */,
 				965F657117CD584E004A9558 /* newsTableIcon.png */,
@@ -666,7 +676,6 @@
 				965F657517CD584E004A9558 /* pastButton.png */,
 				965F657617CD584E004A9558 /* pen2.png */,
 				965F657717CD584E004A9558 /* Pencil-icon.png */,
-				965F657817CD584E004A9558 /* pinkBackground.png */,
 				965F657917CD584E004A9558 /* pinkBot.png */,
 				965F657A17CD584E004A9558 /* placeHolderStartUp.png */,
 				965F657B17CD584E004A9558 /* pressEnter copy.png */,
@@ -881,12 +890,14 @@
 				965F661E17CD584F004A9558 /* searchBarEdit.png in Resources */,
 				965F65B417CD584F004A9558 /* arrow_circle_right.png in Resources */,
 				965F65FC17CD584F004A9558 /* leftViewCell.png in Resources */,
+				96AE642A18476FE80028473D /* chrLaunch.jpg in Resources */,
 				965F65C817CD584F004A9558 /* buffer.png in Resources */,
 				965F65F217CD584F004A9558 /* imad.png in Resources */,
 				965F661917CD584F004A9558 /* redBot.png in Resources */,
 				965F65F417CD584F004A9558 /* internetAct.png in Resources */,
 				965F65C217CD584F004A9558 /* bot.png in Resources */,
 				965F65FD17CD584F004A9558 /* monthContainer.png in Resources */,
+				96AE6430184773440028473D /* launch5.png in Resources */,
 				965F661B17CD584F004A9558 /* redLight.png in Resources */,
 				965F662517CD584F004A9558 /* sportsBackground.png in Resources */,
 				965F662317CD584F004A9558 /* sportAct.png in Resources */,
@@ -967,6 +978,7 @@
 				965F661017CD584F004A9558 /* pressEnter.png in Resources */,
 				965F65D817CD584F004A9558 /* darkBlueBackground.png in Resources */,
 				965F65CF17CD584F004A9558 /* circlePush.png in Resources */,
+				96AE642F184773440028473D /* launch4.png in Resources */,
 				965F664517CD584F004A9558 /* weatherViewBackground\.png in Resources */,
 				965F65F317CD584F004A9558 /* imgresTrue.png in Resources */,
 				965F65F017CD584F004A9558 /* iconTestLarge.png in Resources */,

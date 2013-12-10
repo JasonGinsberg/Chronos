@@ -5,6 +5,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DialController.h"
+#import "DMCircularScrollView.h"
 
 @protocol MultiDialViewControllerDelegate;
 

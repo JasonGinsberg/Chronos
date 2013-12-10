@@ -11,7 +11,7 @@
 #import "AFNetworking.h"
 #import "SBJSON.h"
 
-@interface ViewController : UIViewController <UIScrollViewDelegate, UISearchBarDelegate,NSXMLParserDelegate, MultiDialViewControllerDelegate>{
+@interface ViewController : UIViewController <UIScrollViewDelegate, UISearchBarDelegate, MultiDialViewControllerDelegate>{
     MultiDialViewController *multiDialController;
     
 }
@@ -41,25 +41,24 @@
 @property (weak, nonatomic) IBOutlet UIButton *homeButton;
 @property (weak, nonatomic) IBOutlet UIButton *changeSearchButton;
 @property (weak, nonatomic) IBOutlet UIButton *changeDateButton;
-@property (weak, nonatomic) IBOutlet UIButton *blankLeft;
-@property (weak, nonatomic) IBOutlet UIButton *blankRight;
+
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (weak, nonatomic) IBOutlet NSURL *url;
 @property (weak, nonatomic) IBOutlet NSString *searchTerm;
 @property (weak, nonatomic) IBOutlet NSString *month;
 @property (weak, nonatomic) IBOutlet NSString *day;
 @property (weak, nonatomic) IBOutlet NSString *year;
-@property (weak, nonatomic) IBOutlet NSString *wolframId;
-@property (weak, nonatomic) IBOutlet NSString *wolframTerm;
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property int pageNumber;
 @property float baseOffset;
 @property float offsetStep;
 @property (nonatomic) BOOL goPressed;
+@property (nonatomic) BOOL searchON;
 @property (nonatomic) BOOL test;
 @property (nonatomic) BOOL pressedSearch;
 @property (nonatomic) BOOL loadedSpecificView;
+@property (nonatomic) BOOL changeDatePressed;
 - (IBAction)switchPresetStrings:(id)sender;
 - (IBAction)goButton:(id)sender;
 - (IBAction)enterButton:(id)sender;
